@@ -25,13 +25,18 @@ class MarvelService {
     }
 
     _transformCharacter = (char) => {
-        return {
-        name: char.name,
-        description: char.description ? `${char.description.substring(0, 200 - 3) + '...'}` :  'No information for this character',
-        thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
-        homepage: char.urls[0].url,
-        wiki: char.urls[1].url
+        const character = {
+            name: char.name,
+            description: char.description || 'No information for this character',
+            thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
+            homepage: char.urls[0].url,
+            wiki: char.urls[1].url
         }
+        if (character.description.length > 200) {
+                character.description = character.description.substring(0, 200) + '...';
+        }
+        return character;
+        
     }
 }
 
