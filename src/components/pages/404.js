@@ -1,9 +1,17 @@
-import ErrorMessage from "../errorMessage/ErrorMessage"
-import { Link } from "react-router-dom"
+import ErrorMessage from "../errorMessage/ErrorMessage";
+import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 const Page404 = () => {
     return (
         <div>
+            <Helmet>
+                <meta
+                    name="description"
+                    content='Page doesn`t exist'
+                    />
+                <title>Page doesn`t exist</title>
+            </Helmet>
             <ErrorMessage/>
             <p 
                 style={{'textAlign': 'center', 'fontWeigth': 'bold', 'fontSize': '24px'}}>

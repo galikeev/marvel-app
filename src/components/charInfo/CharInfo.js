@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -68,18 +69,25 @@ const View = ({char}) => {
     return (
         <>
             <div className="char__basics">
-                    <img src={thumbnail} alt={name} style={imgStyle}/>
-                    <div>
-                        <div className="char__info-name">{name}</div>
-                        <div className="char__btns">
-                            <a href={homepage} className="button button__main">
-                                <div className="inner">homepage</div>
-                            </a>
-                            <a href={wiki} className="button button__secondary">
-                                <div className="inner">Wiki</div>
-                            </a>
-                        </div>
+                <Helmet>
+                    <meta
+                        name="description"
+                        content={`${name} character`}
+                        />
+                    <title>{name}</title>
+                </Helmet>
+                <img src={thumbnail} alt={name} style={imgStyle}/>
+                <div>
+                    <div className="char__info-name">{name}</div>
+                    <div className="char__btns">
+                        <a href={homepage} className="button button__main">
+                            <div className="inner">homepage</div>
+                        </a>
+                        <a href={wiki} className="button button__secondary">
+                            <div className="inner">Wiki</div>
+                        </a>
                     </div>
+                </div>
             </div>
             <div className="char__descr">
                 {description}
