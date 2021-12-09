@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -34,6 +34,7 @@ const ComicsList = () => {
 
     useEffect(() => {
         onRequest(offset, true);
+        // eslint-disable-next-line
     }, []);
 
     const onRequest = (offset, initial) => {
@@ -81,9 +82,14 @@ const ComicsList = () => {
         )
     }
 
+    const elements = useMemo(() => {
+        return setContent(process, () => renderItems(comicsList), newItemLoading);
+        // eslint-disable-next-line
+    }, [process])
+
     return (
         <div className="comics__list">
-            {setContent(process, () => renderItems(comicsList), newItemLoading)}
+            {elements}
             <button 
                 className="button button__main button__long"
                 disabled={newItemLoading}
