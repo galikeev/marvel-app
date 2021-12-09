@@ -1,6 +1,6 @@
 # This is a SPA that works with the marvel API
 
-https://galikeev.github.io/
+https://galikeev.github.io/marvel-app/
 
 ## Technologies
 
