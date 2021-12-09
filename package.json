@@ -17,7 +17,8 @@
     "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.2",
     "web-vitals": "^1.0.1",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "sass": "^1.44.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -46,6 +47,6 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.38.0"
+    "sass": "^1.44.0"
   }
 }
