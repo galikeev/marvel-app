@@ -11,12 +11,14 @@ https://galikeev.github.io/
 - AJAX
 
 ### Development
-
->$git clone https://github.com/galikeev/marvel-app.git
->$npm install
->$npm start
+```
+$git clone https://github.com/galikeev/marvel-app.git
+$npm install
+$npm start
+```
 
 ### Build
-
->$npm run build
+```
+$npm run build
+```
 
