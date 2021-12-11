@@ -5,7 +5,7 @@ https://marvel-app-my.herokuapp.com/
 ## Technologies
 
 - JS
-- React
+- React Hooks
 - Formik
 - Yup
 - AJAX
