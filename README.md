@@ -1,4 +1,4 @@
-# This is a SPA that works with the marvel API
+# SPA on React with marvel API
 
 https://marvel-app-my.herokuapp.com/
 
