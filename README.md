@@ -1,6 +1,10 @@
-# SPA on React with marvel API
+# SPA on React with Marvel API
 
 https://marvel-app-my.herokuapp.com/
+
+## Screenshot
+
+[![2022-02-09-10-57-25.png](https://i.postimg.cc/RCbHLY3p/2022-02-09-10-57-25.png)](https://postimg.cc/6Tnq9YfC)
 
 ## Technologies
 
@@ -8,7 +12,8 @@ https://marvel-app-my.herokuapp.com/
 - React Hooks
 - Formik
 - Yup
-- AJAX
+- Fetch
+- Marvel API
 
 ### Development
 ```
